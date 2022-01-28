@@ -1,0 +1,16 @@
+{
+    "name": "com.produktivkeller.simple-coroutines",
+    "version": "0.1.0",
+    "displayName": "Simple Coroutines",
+    "description": "Simple Coroutines is a thin wrapper around Unity coroutines that helps you use coroutines faster and cleaner.",
+    "keywords": [
+        "coroutine",
+        "coroutines",
+        "asynchronous"
+    ],
+    "author": {
+        "name": "PRODUKTIVKELLER Studios",
+        "email": "info.produktivkeller@gmail.com",
+        "url": "https://www.produktivkeller.com"
+    }
+}
