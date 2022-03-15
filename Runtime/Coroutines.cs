@@ -33,10 +33,11 @@ namespace Produktivkeller.SimpleCoroutines
             updateAction(targetValue);
         }
 
-        public static IEnumerator AsynchronousLerpValue(Action<Quaternion> updateAction, Quaternion startValue, Quaternion targetValue,
-                                                        float              animationTime = DEFAULT_ANIMATION_DURATION_IN_SECONDS)
+        public static IEnumerator AsynchronousLerpValue(Action<Quaternion>  updateAction, Quaternion startValue, Quaternion targetValue,
+                                                        float               animationTime       = DEFAULT_ANIMATION_DURATION_IN_SECONDS,
+                                                        MappingFunctionType mappingFunctionType = MappingFunctionType.Ease)
         {
-            return AsynchronousLerpValue(updateAction, startValue, targetValue, Quaternion.Lerp, animationTime);
+            return AsynchronousLerpValue(updateAction, startValue, targetValue, Quaternion.Lerp, animationTime, mappingFunctionType);
         }
 
         public static IEnumerator AsynchronousLerpValue(Action<Vector3>     updateAction, Vector3 startValue, Vector3 targetValue,
