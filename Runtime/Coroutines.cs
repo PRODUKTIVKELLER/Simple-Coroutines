@@ -37,21 +37,21 @@ namespace Produktivkeller.SimpleCoroutines
                                                         float               animationTime       = DEFAULT_ANIMATION_DURATION_IN_SECONDS,
                                                         MappingFunctionType mappingFunctionType = MappingFunctionType.Ease)
         {
-            return AsynchronousLerpValue(updateAction, startValue, targetValue, Quaternion.Lerp, animationTime, mappingFunctionType);
+            return AsynchronousLerpValue(updateAction, startValue, targetValue, Quaternion.Lerp, animationTime, mappingFunctionType, Time.timeScale == 0);
         }
 
         public static IEnumerator AsynchronousLerpValue(Action<Vector3>     updateAction, Vector3 startValue, Vector3 targetValue,
                                                         float               animationTime       = DEFAULT_ANIMATION_DURATION_IN_SECONDS,
                                                         MappingFunctionType mappingFunctionType = MappingFunctionType.Ease)
         {
-            return AsynchronousLerpValue(updateAction, startValue, targetValue, Vector3.Lerp, animationTime, mappingFunctionType);
+            return AsynchronousLerpValue(updateAction, startValue, targetValue, Vector3.Lerp, animationTime, mappingFunctionType, Time.timeScale == 0);
         }
 
         public static IEnumerator AsynchronousLerpValue(Action<Vector2>     updateAction, Vector2 startValue, Vector2 targetValue,
                                                         float               animationTime       = DEFAULT_ANIMATION_DURATION_IN_SECONDS,
                                                         MappingFunctionType mappingFunctionType = MappingFunctionType.Ease)
         {
-            return AsynchronousLerpValue(updateAction, startValue, targetValue, Vector2.Lerp, animationTime, mappingFunctionType);
+            return AsynchronousLerpValue(updateAction, startValue, targetValue, Vector2.Lerp, animationTime, mappingFunctionType, Time.timeScale == 0);
         }
 
         public static IEnumerator AsynchronousLerpValue(Action<float>       updateAction, float startValue, float targetValue,
@@ -65,14 +65,14 @@ namespace Produktivkeller.SimpleCoroutines
                                                         float               animationTime       = DEFAULT_ANIMATION_DURATION_IN_SECONDS,
                                                         MappingFunctionType mappingFunctionType = MappingFunctionType.Ease)
         {
-            return AsynchronousLerpValue(updateAction, startValue, targetValue, IntegerLerp, animationTime, mappingFunctionType);
+            return AsynchronousLerpValue(updateAction, startValue, targetValue, IntegerLerp, animationTime, mappingFunctionType, Time.timeScale == 0);
         }
 
         public static IEnumerator AsynchronousLerpValue(Action<Color>       updateAction, Color startValue, Color targetValue,
                                                         float               animationTime       = DEFAULT_ANIMATION_DURATION_IN_SECONDS,
                                                         MappingFunctionType mappingFunctionType = MappingFunctionType.Ease)
         {
-            return AsynchronousLerpValue(updateAction, startValue, targetValue, Color.Lerp, animationTime, mappingFunctionType);
+            return AsynchronousLerpValue(updateAction, startValue, targetValue, Color.Lerp, animationTime, mappingFunctionType, Time.timeScale == 0);
         }
 
         private static int IntegerLerp(int a, int b, float lerp)
